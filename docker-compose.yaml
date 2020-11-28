@@ -1,0 +1,22 @@
+version: "3"
+
+services:
+  hass:
+    container_name: hass
+    ports:
+      - 8123:8123
+    network_mode: host
+    volumes:
+      - "${HASS_CONFIG}:/config"
+      - /etc/localtime:/etc/localtime:ro
+    build:
+      context: .
+      dockerfile: Dockerfile-hass
+
+  grafana:
+    container_name: grafana
+    ports:
+      - 3000:3000
+    build:
+      context: .
+      dockerfile: Dockerfile-grafana

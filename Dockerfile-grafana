@@ -1,0 +1,3 @@
+FROM grafana/grafana
+# ENV GF_INSTALL_PLUGINS="prometheus"
+EXPOSE 3000
