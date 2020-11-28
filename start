@@ -1,0 +1,16 @@
+#!/bin/bash
+
+TMP=./tmp
+
+NODE_EXPORTER_BIN_PATH=./bin/node_exporter
+NODE_EXPORTER_BIN="$NODE_EXPORTER_BIN_PATH/node_exporter"
+NODE_EXPORTER_TMP="$TMP/node_exporter.tar.gz"
+
+if [ ! -e "$NODE_EXPORTER_BIN" ]; then
+    wget -O "$NODE_EXPORTER_TMP" https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz
+    mkdir "$NODE_EXPORTER_BIN_PATH"
+    tar xvfz "$NODE_EXPORTER_TMP" -C "$NODE_EXPORTER_BIN_PATH" --strip-components=1 
+    rm "$NODE_EXPORTER_TMP"
+fi
+
+eval "$NODE_EXPORTER_BIN | sudo docker-compose up"
