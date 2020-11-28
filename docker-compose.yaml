@@ -12,14 +12,16 @@ services:
       - /etc/localtime:/etc/localtime:ro
     environment:
       - TZ=America/Los_Angeles
-    build:
-      context: .
-      dockerfile: Dockerfile-hass
+    image: homeassistant/home-assistant:stable
 
   grafana:
     container_name: grafana
     ports:
       - 3000:3000
-    build:
-      context: .
-      dockerfile: Dockerfile-grafana
+    image: grafana/grafana
+
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus
+    ports:
+      - 9090:9090
