@@ -19,6 +19,7 @@ services:
     image: grafana/grafana
     environment:
       - GF_SECURITY_ALLOW_EMBEDDING=true
+      - DOCKER_IP=${DOCKER_IP}
     ports:
       - 3000:3000
     volumes:
