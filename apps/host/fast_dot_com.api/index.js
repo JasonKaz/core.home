@@ -40,7 +40,7 @@ let speedtest = new FastSpeedtest({
     https: true,
     urlCount: 5,
     bufferSize: 8,
-    unit: FastSpeedtest.UNITS.Bps,
+    unit: FastSpeedtest.UNITS.Mbps,
 });
 
 router.get('/metrics', async (ctx) => (ctx.body = register.metrics()));
