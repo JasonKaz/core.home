@@ -21,6 +21,9 @@ services:
       - GF_SECURITY_ALLOW_EMBEDDING=true
     ports:
       - 3000:3000
+    volumes:
+      - ./configurations/grafana/datasources:/etc/grafana/provisioning/datasources
+      - ./configurations/grafana/dashboards:/etc/grafana/provisioning/dashboards
 
   prometheus:
     container_name: prometheus
@@ -29,4 +32,4 @@ services:
     ports:
       - 9090:9090
     volumes:
-      - ./prometheus.yaml:/etc/prometheus/prometheus.yml
+      - ./configurations/prometheus/prometheus.yaml:/etc/prometheus/prometheus.yml
