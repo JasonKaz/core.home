@@ -352,7 +352,7 @@
         "current": false,
         "max": false,
         "min": false,
-        "show": false,
+        "show": true,
         "total": false,
         "values": false
       },
@@ -375,9 +375,17 @@
         {
           "expr": "download_speed_in_bytes",
           "interval": "",
-          "legendFormat": "",
+          "legendFormat": "Speed",
           "queryType": "randomWalk",
           "refId": "A"
+        },
+        {
+          "expr": "avg_over_time(download_speed_in_bytes[1h])",
+          "hide": false,
+          "interval": "",
+          "legendFormat": "1-Hour Average",
+          "queryType": "randomWalk",
+          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -432,12 +440,12 @@
     "list": []
   },
   "time": {
-    "from": "now-5m",
+    "from": "now-1h",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Hardware Monitor",
   "uid": "Yh-znFAGk",
-  "version": 5
+  "version": 6
 }
