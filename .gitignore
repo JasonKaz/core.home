@@ -1,5 +1,8 @@
 .env
 bin/
 tmp/
+data/
 node_modules/
 package-lock.json
+*.swp
+*.out
