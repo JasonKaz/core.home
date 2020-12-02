@@ -10,3 +10,6 @@ scrape_configs:
 - job_name: fastdotcom
   static_configs:
   - targets: ['localhost:3456']
+- job_name: pihole
+  static_configs:
+  - targets: ['localhost:9617']
