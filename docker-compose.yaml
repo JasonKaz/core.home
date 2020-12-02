@@ -47,6 +47,8 @@ services:
     environment:
       TZ: 'America/Los_Angeles'
       WEBPASSWORD: '${PIHOLE_PASSWORD}'
+      DNS1: '1.1.1.1'
+      DNS2: '8.8.8.8'
     volumes:
       - './data/etc-pihole/:/etc/pihole/'
       - './data/etc-dnsmasq.d/:/etc/dnsmasq.d/'

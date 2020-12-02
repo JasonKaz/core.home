@@ -13,4 +13,4 @@ if [ ! -e "$NODE_EXPORTER_BIN" ]; then
     rm "$NODE_EXPORTER_TMP"
 fi
 
-eval "$NODE_EXPORTER_BIN"
+eval "$NODE_EXPORTER_BIN > /dev/null 2>&1 &"
