@@ -20,6 +20,7 @@ services:
     environment:
       - GF_SECURITY_ALLOW_EMBEDDING=true
       - DOCKER_IP=${DOCKER_IP}
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel,farski-blendstat-panel
     ports:
       - 3000:3000
     volumes:

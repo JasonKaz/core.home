@@ -1,4 +1,4 @@
-{ 
+{
   "annotations": {
     "list": [
       {
@@ -15,7 +15,6 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
-  "id": 2,
   "links": [],
   "panels": [
     {
@@ -187,8 +186,8 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 4,
-        "w": 4,
+        "h": 7,
+        "w": 5,
         "x": 8,
         "y": 0
       },
@@ -221,6 +220,13 @@
       "type": "gauge"
     },
     {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": ".02"
+      },
       "datasource": "Prometheus",
       "fieldConfig": {
         "defaults": {
@@ -241,26 +247,26 @@
         },
         "overrides": []
       },
+      "fontSize": "80%",
+      "format": "short",
       "gridPos": {
-        "h": 8,
-        "w": 12,
-        "x": 12,
+        "h": 7,
+        "w": 5,
+        "x": 13,
         "y": 0
       },
       "id": 10,
-      "options": {
-        "displayMode": "gradient",
-        "orientation": "auto",
-        "reduceOptions": {
-          "calcs": [
-            "mean"
-          ],
-          "fields": "",
-          "values": false
-        },
-        "showUnfilled": false
+      "interval": null,
+      "legend": {
+        "show": false,
+        "values": false
       },
+      "legendType": "Under graph",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "donut",
       "pluginVersion": "7.3.4",
+      "strokeWidth": 1,
       "targets": [
         {
           "expr": "pihole_top_ads",
@@ -273,7 +279,73 @@
       "timeFrom": null,
       "timeShift": null,
       "title": "Top Ads by Domain",
-      "type": "bargauge"
+      "transparent": true,
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
+    },
+    {
+      "aliasColors": {},
+      "breakPoint": "50%",
+      "cacheTimeout": null,
+      "combine": {
+        "label": "Others",
+        "threshold": ".02"
+      },
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {
+            "align": null,
+            "filterable": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "fontSize": "80%",
+      "format": "short",
+      "gridPos": {
+        "h": 7,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 17,
+      "interval": null,
+      "legend": {
+        "show": false,
+        "values": false
+      },
+      "legendType": "Under graph",
+      "links": [],
+      "nullPointMode": "connected",
+      "pieType": "donut",
+      "pluginVersion": "7.3.4",
+      "strokeWidth": 1,
+      "targets": [
+        {
+          "expr": "pihole_top_sources",
+          "interval": "",
+          "legendFormat": "{{source}}",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Top Sources",
+      "transparent": true,
+      "type": "grafana-piechart-panel",
+      "valueName": "current"
     },
     {
       "aliasColors": {},
@@ -293,7 +365,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 4
+        "y": 7
       },
       "hiddenSeries": false,
       "id": 6,
@@ -389,7 +461,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 8
+        "y": 7
       },
       "hiddenSeries": false,
       "id": 14,
@@ -485,7 +557,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 12
+        "y": 15
       },
       "hiddenSeries": false,
       "id": 16,
@@ -527,7 +599,7 @@
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "% of Ads Blocked",
+      "title": "% of Requests Blocked",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -582,7 +654,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 16
+        "y": 15
       },
       "hiddenSeries": false,
       "id": 12,
