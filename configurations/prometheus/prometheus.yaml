@@ -13,3 +13,6 @@ scrape_configs:
 - job_name: pihole
   static_configs:
   - targets: ['localhost:9617']
+- job_name: gw1000
+  static_configs:
+  - targets: ['localhost:7689']
