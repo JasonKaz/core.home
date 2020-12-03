@@ -1,0 +1,7 @@
+apiVersion: 1
+
+providers:
+  - name: 'Default'
+    title: asd
+    options:
+      path: /etc/grafana/provisioning/dashboards 
