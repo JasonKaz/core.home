@@ -17,6 +17,7 @@ services:
   grafana:
     container_name: grafana
     image: grafana/grafana:7.3.4
+    restart: always
     environment:
       - GF_SECURITY_ALLOW_EMBEDDING=true
       - DOCKER_IP=${DOCKER_IP}
@@ -31,6 +32,7 @@ services:
     container_name: prometheus
     image: prom/prometheus
     network_mode: host
+    restart: always
     ports:
       - 9090:9090
     volumes:
@@ -39,6 +41,7 @@ services:
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
+    restart: unless-stopped
     ports:
       - "53:53/tcp"
       - "53:53/udp"
@@ -55,11 +58,11 @@ services:
       - './data/etc-dnsmasq.d/:/etc/dnsmasq.d/'
     cap_add:
       - NET_ADMIN
-    restart: unless-stopped
 
   pihole_exporter:
     container_name: pihole_exporter
     image: ekofr/pihole-exporter:0.0.9
+    restart: unless-stopped
     ports:
       - 9617:9617
     environment:
