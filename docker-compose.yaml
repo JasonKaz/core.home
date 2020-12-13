@@ -71,4 +71,12 @@ services:
       - "PIHOLE_PASSWORD=${PIHOLE_PASSWORD}"
       - PORT=9617
       - INTERVAL=30s
+  
+  grafana_gateway:
+    container_name: grafana_gateway
+    build:
+      context: ./apps/docker/grafana_gateway/
+    ports:
+      - 4545:4545
+
 
