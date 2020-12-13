@@ -78,5 +78,7 @@ services:
       context: ./apps/docker/grafana_gateway/
     ports:
       - 4545:4545
+    volumes:
+      - ./apps/docker/grafana_gateway/config:/app/config:ro
 
 

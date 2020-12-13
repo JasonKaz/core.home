@@ -62,5 +62,5 @@ app
             console.error('Server error', err);
             throw err;
         }
-        console.log("The server has started")
+        console.log("The server has started", config);
     });
