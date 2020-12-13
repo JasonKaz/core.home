@@ -4,6 +4,7 @@ var Router = require('koa-router');
 const app = new Koa();
 const router = new Router();
 const axios = require('axios').default;
+const config = require('config');
 
 router.get('/query', async (ctx) => {
     await doQuery(ctx, ctx.request.query.query);
@@ -30,7 +31,7 @@ const fetchData = async (query) => {
     return axios.get(`http://192.168.0.180:3000/api/datasources/proxy/1/api/v1/query?query=${query}&time=1607244791`, {
         headers: {
             Accept: 'application/json',
-            Authorization: `Bearer eyJrIjoiN0ZqbGhoRUE2UklOOUFDVE1wUkN5UDVIS1pMejVvTEIiLCJuIjoiaGFzcy1pbXBvcnRlciIsImlkIjoxfQ==`
+            Authorization: `Bearer ${config.grafanaToken}`
         }
     });
 };
