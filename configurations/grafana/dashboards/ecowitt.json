@@ -18,13 +18,48 @@
   "links": [],
   "panels": [
     {
+      "dashboardFilter": "",
+      "dashboardTags": [],
+      "datasource": null,
+      "fieldConfig": {
+        "defaults": {
+          "custom": {}
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 8,
+        "w": 12,
+        "x": 0,
+        "y": 0
+      },
+      "id": 26,
+      "limit": 10,
+      "nameFilter": "",
+      "onlyAlertsOnDashboard": true,
+      "pluginVersion": "7.3.4",
+      "show": "current",
+      "sortOrder": 3,
+      "stateFilter": [],
+      "targets": [
+        {
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Alerts",
+      "type": "alertlist"
+    },
+    {
       "collapsed": false,
       "datasource": null,
       "gridPos": {
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 0
+        "y": 8
       },
       "id": 13,
       "panels": [],
@@ -49,7 +84,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 1
+        "y": 9
       },
       "hiddenSeries": false,
       "id": 4,
@@ -159,7 +194,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 1
+        "y": 9
       },
       "hiddenSeries": false,
       "id": 8,
@@ -257,7 +292,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 9
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 6,
@@ -366,7 +401,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 9
+        "y": 17
       },
       "hiddenSeries": false,
       "id": 9,
@@ -464,7 +499,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 17
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 23,
@@ -562,7 +597,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 17
+        "y": 25
       },
       "hiddenSeries": false,
       "id": 24,
@@ -649,7 +684,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 25
+        "y": 33
       },
       "id": 11,
       "panels": [],
@@ -685,7 +720,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 26
+        "y": 34
       },
       "hiddenSeries": false,
       "id": 2,
@@ -796,7 +831,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 26
+        "y": 34
       },
       "hiddenSeries": false,
       "id": 14,
@@ -879,6 +914,41 @@
       }
     },
     {
+      "alert": {
+        "alertRuleTags": {},
+        "conditions": [
+          {
+            "evaluator": {
+              "params": [
+                10
+              ],
+              "type": "lt"
+            },
+            "operator": {
+              "type": "and"
+            },
+            "query": {
+              "params": [
+                "A",
+                "1h",
+                "now"
+              ]
+            },
+            "reducer": {
+              "params": [],
+              "type": "avg"
+            },
+            "type": "query"
+          }
+        ],
+        "executionErrorState": "alerting",
+        "for": "5m",
+        "frequency": "1m",
+        "handler": 1,
+        "name": "Fittonia Moisture (CH3 #00D79F) alert",
+        "noDataState": "alerting",
+        "notifications": []
+      },
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -907,7 +977,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 33
+        "y": 41
       },
       "hiddenSeries": false,
       "id": 15,
@@ -945,7 +1015,15 @@
           "refId": "A"
         }
       ],
-      "thresholds": [],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "lt",
+          "value": 10
+        }
+      ],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
@@ -1019,7 +1097,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 33
+        "y": 41
       },
       "hiddenSeries": false,
       "id": 16,
@@ -1108,7 +1186,7 @@
         "h": 1,
         "w": 24,
         "x": 0,
-        "y": 40
+        "y": 48
       },
       "id": 19,
       "panels": [],
@@ -1145,7 +1223,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 41
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 17,
@@ -1256,7 +1334,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 41
+        "y": 49
       },
       "hiddenSeries": false,
       "id": 20,
@@ -1367,7 +1445,7 @@
         "h": 7,
         "w": 12,
         "x": 0,
-        "y": 48
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 22,
@@ -1478,7 +1556,7 @@
         "h": 7,
         "w": 12,
         "x": 12,
-        "y": 48
+        "y": 56
       },
       "hiddenSeries": false,
       "id": 21,
@@ -1568,12 +1646,12 @@
     "list": []
   },
   "time": {
-    "from": "now-12h",
+    "from": "now-30m",
     "to": "now"
   },
   "timepicker": {},
   "timezone": "",
   "title": "Ecowitt",
   "uid": "8BbvtPRRz",
-  "version": 1
+  "version": 2
 }
