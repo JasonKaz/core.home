@@ -116,11 +116,18 @@
       "targets": [
         {
           "expr": "gw1000_tempinf",
+          "hide": false,
           "instant": false,
           "interval": "",
           "legendFormat": "Temperature",
           "queryType": "randomWalk",
           "refId": "A"
+        },
+        {
+          "expr": "avg_over_time(gw1000_tempinf[1d])",
+          "interval": "",
+          "legendFormat": "1-Day Average",
+          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -230,6 +237,12 @@
           "legendFormat": "Humidity",
           "queryType": "randomWalk",
           "refId": "A"
+        },
+        {
+          "expr": "avg_over_time(gw1000_humidityin[1d])",
+          "interval": "",
+          "legendFormat": "1-Day Moving Average",
+          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -328,6 +341,12 @@
           "legendFormat": "Temperature",
           "queryType": "randomWalk",
           "refId": "A"
+        },
+        {
+          "expr": "avg_over_time(gw1000_temp1f[1d])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -437,6 +456,12 @@
           "legendFormat": "Humidity",
           "queryType": "randomWalk",
           "refId": "A"
+        },
+        {
+          "expr": "avg_over_time(gw1000_humidity1[1d])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -535,6 +560,12 @@
           "legendFormat": "Temperature",
           "queryType": "randomWalk",
           "refId": "A"
+        },
+        {
+          "expr": "avg_over_time(gw1000_tempf[1d])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -633,6 +664,12 @@
           "legendFormat": "Humidity",
           "queryType": "randomWalk",
           "refId": "A"
+        },
+        {
+          "expr": "avg_over_time(gw1000_humidity[1d])",
+          "interval": "",
+          "legendFormat": "",
+          "refId": "B"
         }
       ],
       "thresholds": [],
@@ -1740,5 +1777,5 @@
   "timezone": "",
   "title": "Ecowitt",
   "uid": "8BbvtPRRz",
-  "version": 3
+  "version": 4
 }

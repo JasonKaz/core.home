@@ -106,7 +106,23 @@
             ]
           }
         },
-        "overrides": []
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "pihole_domains_being_blocked{hostname=\"192.168.0.180\", instance=\"localhost:9617\", job=\"pihole\"}"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "rgb(255, 255, 255)",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
       },
       "gridPos": {
         "h": 4,
@@ -114,7 +130,7 @@
         "x": 4,
         "y": 0
       },
-      "id": 19,
+      "id": 20,
       "options": {
         "colorMode": "value",
         "graphMode": "none",
@@ -127,12 +143,12 @@
           "fields": "",
           "values": false
         },
-        "textMode": "auto"
+        "textMode": "value"
       },
       "pluginVersion": "7.3.4",
       "targets": [
         {
-          "expr": "pihole_ads_blocked_today",
+          "expr": "pihole_dns_queries_all_types",
           "interval": "",
           "legendFormat": "",
           "queryType": "randomWalk",
@@ -141,7 +157,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "Ads Blocked Today",
+      "title": "# Queries Today",
       "transparent": true,
       "type": "stat"
     },
@@ -170,7 +186,7 @@
         "overrides": []
       },
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 5,
         "x": 9,
         "y": 0
@@ -199,7 +215,7 @@
       ],
       "timeFrom": null,
       "timeShift": null,
-      "title": "# of Blocked Requests Today",
+      "title": "% of Blocked Requests Today",
       "transparent": true,
       "type": "gauge"
     },
@@ -234,7 +250,7 @@
       "fontSize": "80%",
       "format": "short",
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 4,
         "x": 15,
         "y": 0
@@ -298,7 +314,7 @@
       "fontSize": "80%",
       "format": "short",
       "gridPos": {
-        "h": 7,
+        "h": 8,
         "w": 4,
         "x": 19,
         "y": 0
@@ -345,7 +361,8 @@
                 "value": null
               }
             ]
-          }
+          },
+          "unit": "none"
         },
         "overrides": [
           {
@@ -366,9 +383,9 @@
         ]
       },
       "gridPos": {
-        "h": 3,
-        "w": 5,
-        "x": 4,
+        "h": 4,
+        "w": 4,
+        "x": 0,
         "y": 4
       },
       "id": 4,
@@ -403,6 +420,61 @@
       "type": "stat"
     },
     {
+      "datasource": "Prometheus",
+      "fieldConfig": {
+        "defaults": {
+          "custom": {},
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 5,
+        "x": 4,
+        "y": 4
+      },
+      "id": 19,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "last"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "auto"
+      },
+      "pluginVersion": "7.3.4",
+      "targets": [
+        {
+          "expr": "pihole_ads_blocked_today",
+          "interval": "",
+          "legendFormat": "",
+          "queryType": "randomWalk",
+          "refId": "A"
+        }
+      ],
+      "timeFrom": null,
+      "timeShift": null,
+      "title": "Ads Blocked Today",
+      "transparent": true,
+      "type": "stat"
+    },
+    {
       "aliasColors": {},
       "bars": false,
       "dashLength": 10,
@@ -420,7 +492,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 7
+        "y": 8
       },
       "hiddenSeries": false,
       "id": 6,
@@ -516,7 +588,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 7
+        "y": 8
       },
       "hiddenSeries": false,
       "id": 14,
@@ -612,7 +684,7 @@
         "h": 8,
         "w": 12,
         "x": 0,
-        "y": 15
+        "y": 16
       },
       "hiddenSeries": false,
       "id": 16,
@@ -709,7 +781,7 @@
         "h": 8,
         "w": 12,
         "x": 12,
-        "y": 15
+        "y": 16
       },
       "hiddenSeries": false,
       "id": 12,
@@ -803,5 +875,5 @@
   "timezone": "",
   "title": "PiHole",
   "uid": "PUrR9aggz",
-  "version": 1
+  "version": 2
 }
