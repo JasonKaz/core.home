@@ -1,5 +1,5 @@
 {
-  "name": "gw1000_receiver",
+  "name": "gw1000_exporter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,7 @@
   "dependencies": {
     "koa": "^2.13.0",
     "koa-bodyparser": "^4.3.0",
-    "koa-router": "^10.0.0"
+    "koa-router": "^10.0.0",
+    "prom-client": "^13.1.0"
   }
 }

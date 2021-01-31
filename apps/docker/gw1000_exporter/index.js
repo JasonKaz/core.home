@@ -47,7 +47,9 @@ router.post('/', async (ctx) => {
   Object.entries(parsePayload(uw1000Data)).forEach(([key, value]) => { setMetricValue(key, value) });
 });
 
-router.get('/metrics', async (ctx) => (ctx.body = register.metrics()));
+router.get('/metrics', async (ctx) => {
+  ctx.body = await register.metrics();
+});
 
 app
   .use(router.routes())

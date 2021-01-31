@@ -81,4 +81,9 @@ services:
     volumes:
       - ./apps/docker/grafana_gateway/config:/app/config:ro
 
-
+  gw1000_exporter:
+    container_name: gw1000_exporter
+    build:
+      context: ./apps/docker/gw1000_exporter/
+    ports:
+     - 7689:7689
