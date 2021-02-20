@@ -15,6 +15,7 @@
   "editable": true,
   "gnetId": null,
   "graphTooltip": 0,
+  "id": 1,
   "links": [],
   "panels": [
     {
@@ -150,7 +151,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:214",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -159,7 +159,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:215",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -265,7 +264,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:243",
           "format": "percent",
           "label": null,
           "logBase": 1,
@@ -274,7 +272,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:244",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -369,7 +366,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:272",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -378,7 +374,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:273",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -484,7 +479,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:357",
           "format": "percent",
           "label": null,
           "logBase": 1,
@@ -493,7 +487,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:358",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -588,7 +581,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:301",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -597,7 +589,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:302",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -692,7 +683,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:386",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -701,7 +691,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:387",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -859,7 +848,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:69",
           "decimals": 0,
           "format": "percent",
           "label": null,
@@ -869,7 +857,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:70",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1013,7 +1000,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:98",
           "decimals": 0,
           "format": "percent",
           "label": null,
@@ -1023,7 +1009,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:99",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1167,7 +1152,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:127",
           "decimals": 0,
           "format": "percent",
           "label": null,
@@ -1177,7 +1161,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:128",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1198,7 +1181,7 @@
           {
             "evaluator": {
               "params": [
-                10
+                20
               ],
               "type": "lt"
             },
@@ -1300,13 +1283,13 @@
           "fill": true,
           "line": true,
           "op": "lt",
-          "value": 10
+          "value": 20
         }
       ],
       "timeFrom": null,
       "timeRegions": [],
       "timeShift": null,
-      "title": "Bird's Nest Fern Moisture (CH4 #00D7Df)",
+      "title": "Moisture (CH4 #00D7Df)",
       "tooltip": {
         "shared": true,
         "sort": 0,
@@ -1322,7 +1305,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:156",
           "decimals": 0,
           "format": "percent",
           "label": null,
@@ -1332,7 +1314,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:157",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1448,7 +1429,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:241",
           "format": "volt",
           "label": null,
           "logBase": 1,
@@ -1457,7 +1437,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:242",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1559,7 +1538,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:241",
           "format": "volt",
           "label": null,
           "logBase": 1,
@@ -1568,7 +1546,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:242",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1670,7 +1647,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:241",
           "format": "volt",
           "label": null,
           "logBase": 1,
@@ -1679,7 +1655,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:242",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1781,7 +1756,6 @@
       },
       "yaxes": [
         {
-          "$$hashKey": "object:241",
           "format": "volt",
           "label": null,
           "logBase": 1,
@@ -1790,7 +1764,6 @@
           "show": true
         },
         {
-          "$$hashKey": "object:242",
           "format": "short",
           "label": null,
           "logBase": 1,
@@ -1820,5 +1793,5 @@
   "timezone": "",
   "title": "Ecowitt",
   "uid": "8BbvtPRRz",
-  "version": 5
+  "version": 6
 }
